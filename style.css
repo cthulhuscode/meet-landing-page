@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --dark-green-color: #4D96A9;
+  --light-green-color: #8FE3F9;
+
+  --dark-purple-color: #855FB1;
+  --light-purple-color: #D9B8FF;
+
+  --black-color: #28283D;
+  --gray-color: #87879D;
+  --white-color:#FAFAFA;
+}
+
+body{
+  background-color: var(--white-color);
+  font-size: 62.5%;
+}
