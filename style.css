@@ -6,17 +6,289 @@
 
 :root{
   --dark-green-color: #4D96A9;
-  --light-green-color: #8FE3F9;
+  --light-green-color: #71C0D4;
 
   --dark-purple-color: #855FB1;
-  --light-purple-color: #D9B8FF;
+  --light-purple-color: #B18BDD;
 
   --black-color: #28283D;
   --gray-color: #87879D;
-  --white-color:#FAFAFA;
+  --white-color:#FAFAFA;  
+  font-size: 62.5%;
 }
 
 body{
   background-color: var(--white-color);
-  font-size: 62.5%;
+  font-family: "Red Hat Display";  
+  width: 100%;
+  height: 100%;
+}
+
+/* HEADER */
+
+.logo{
+  width: calc(119px * 1.25);
+  height: calc(28px * 1.25);  
+
+  display: block;  
+  margin: 0 auto;
+
+  margin-top: 80px;
+  margin-bottom: 61px;
+}
+
+.hero{
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  position: relative;  
+  
+  min-height: 358px;
+  
+  overflow: hidden;
+}
+
+.hero-image{
+  z-index: -1;
+}
+
+.hero-image--mobile{ 
+  display: none;   
+  width: 107.5%;  
+  max-width: fit-content;    
+}
+
+.hero-image--left{  
+  position: absolute;
+  top: 0px;
+  left: -32px;
+}
+
+.hero-image--right{  
+  position: absolute;
+  right: -32px;    
+  bottom: 0px;
+}
+
+.hero__info{
+  z-index: 1;
+  margin: 0 auto;
+  max-width: 540px;
+  
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.hero__primary-text{
+  font-weight: 900;
+  font-size: 6.4rem;
+  line-height: 6.4rem;  
+
+  color: var(--black-color);
+}
+
+.hero__secondary-text{
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+
+  color: var(--gray-color);
+}
+
+.hero__buttons{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.button{
+  border-radius: 29px;
+  height: 58px;
+  border: none;  
+  color: #fff;
+  cursor: pointer;
+
+  font-weight: 900;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+
+.hero__button--download{
+  width: 193px;
+  background-color: var(--dark-green-color);
+}
+
+.hero__button--download:hover{
+  background-color: var(--light-green-color);
+}
+
+.button-download__version{
+  color: #8FE3F9;
+}
+
+.hero__button--what{
+  width: 139px;
+  background-color: var(--dark-purple-color);
+}
+
+.hero__button--what:hover{
+  background-color: var(--light-purple-color);
+}
+
+/* SEPARATOR 1 */
+
+.separator-1{
+  width: 100%;  
+  margin: 0 auto;
+  margin-top: 110px;
+}
+
+.separator-figure{
+  margin: 0 auto;
+  width: 56px;
+  height: 140px;   
+  
+  position: relative;
+}
+
+.figure-line__box{
+  position: absolute;
+  width: 100%;
+  height: 84px;
+  top: 0;
+}
+
+.figure-line__line{
+  height: 100%;
+  width: 0;
+  border: none;
+
+  border-left: 1px solid rgba(135, 135, 157, 0.25);;
+  margin: 0 auto;
+}
+
+.figure-circle{
+  position: absolute;
+  bottom: 0px;
+  
+  border: 1px solid rgba(135, 135, 157, 0.25);;
+  border-radius: 100%;
+  width: 56px;
+  height: 56px;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--gray-color);
+}
+
+/* GALLERY */
+
+.gallery{
+  margin-top: 64px;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(164px, 255px));
+  grid-template-rows: minmax(156px, 242px);
+
+  place-content: center;
+  gap: 30px;
+}
+
+.gallery-image{
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: contain;
+  border-radius: 8px;  
+}
+
+@media screen and (min-width: 1420px){
+  .hero{
+    overflow: unset;
+    max-width: 1420px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1214px) {
+
+  /* HEADER */
+
+  .logo{
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .hero-image--left{
+    display: none;
+  }  
+  .hero-image--right{
+    display: none;
+  }
+  .hero-image--mobile{
+    display: unset;
+  }
+
+  .separator-1{
+    margin-top: 80px;
+  }
+
+  .gallery{
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+  /* HEADER */
+
+  .hero__info{
+    margin-top: 20px; 
+    max-width: 457px;
+    padding: 0 24px;
+  }  
+  .hero__primary-text{
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+  }
+  .hero__secondary-text{
+    font-size: 16px;
+  } 
+}
+
+@media screen and (max-width: 766px) {
+  .gallery{
+    grid-template-columns: repeat(2, 151px);
+    grid-template-rows: repeat(2, 143px);
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  /* HEADER */
+
+  .hero__info{
+    width: 100%;
+  }
+  .hero__primary-text{
+    font-size: 4rem;
+    line-height: 4.4rem;
+  }
+  
+  .separator-1{
+    margin-top: 64px;
+  }
 }
