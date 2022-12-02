@@ -215,6 +215,137 @@ body{
   border-radius: 8px;  
 }
 
+/* DETAILS */
+.details{
+  text-align: center;
+  max-width: 540px;
+  
+  margin: 0 auto;
+  margin-top: 80px;
+
+  display: flex;
+  flex-direction: column; 
+  align-items: center;   
+  gap: 16px;
+}
+
+.details__secondary-text{
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  letter-spacing: 0.4rem;
+  color: var(--dark-green-color);
+}
+
+.details__primary-text{
+  max-width: 445px;
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 4.4rem;
+  color: var(--black-color);
+}
+
+.details__tertiary-text{
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  color: var(--gray-color);  
+}
+
+/* SEPARATOR 2 */
+
+.separator-2__container{  
+  display: flex;
+  justify-content: center;
+}
+
+.separator-2{
+
+  position: absolute;  
+
+  top: -113px;
+}
+
+.separator-2 .figure-circle{
+  background: #FAFAFA;
+}
+
+/* FOOTER */
+
+.footer{
+  margin-top: 184px; 
+  min-height: 308px;
+  position: relative;  
+  z-index: 0;
+}
+
+.footer-image__container{
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: -1;
+}
+
+.footer__image{
+  position: relative; 
+  width: 100%; 
+  height: 100%;  
+}
+
+.footer__image::after{  
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color:#4D96A9;
+  mix-blend-mode: normal;
+  opacity: 0.6;  
+}
+
+.footer__info{
+  z-index: 99;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer__primary-text{
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 44px;
+  /* color: #FAFAFA; */
+}
+
+.footer__secondary-text{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  max-width: 350px;
+  /* color: #FAFAFA; */
+}
+
+.footer__button{
+  background-color: var(--dark-purple-color);
+  width: 193px;
+  height: 58px;
+}
+
+.footer-button__version{
+  color: #D9B8FF;
+}
+
 @media screen and (min-width: 1420px){
   .hero{
     overflow: unset;
@@ -240,6 +371,10 @@ body{
   .hero-image--mobile{
     display: unset;
   }
+  
+  .hero__info{
+    margin-top: 20px;     
+  } 
 
   .separator-1{
     margin-top: 80px;
@@ -254,8 +389,7 @@ body{
 
   /* HEADER */
 
-  .hero__info{
-    margin-top: 20px; 
+  .hero__info, .details{    
     max-width: 457px;
     padding: 0 24px;
   }  
@@ -287,8 +421,16 @@ body{
     font-size: 4rem;
     line-height: 4.4rem;
   }
-  
   .separator-1{
     margin-top: 64px;
+  }
+
+  .details__primary-text{
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .details__tertiary-text{
+    font-size: 16px;
   }
 }
