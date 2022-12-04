@@ -344,6 +344,10 @@ body{
   z-index: 2;
 }
 
+.footer__button:hover{
+  background-color: var(--light-purple-color);
+}
+
 .footer-button__version{
   color: #D9B8FF;
 }
