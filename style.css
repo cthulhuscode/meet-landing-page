@@ -21,7 +21,7 @@ body{
   background-color: var(--white-color);
   font-family: "Red Hat Display";  
   width: 100%;
-  height: 100%;
+  height: 100%;  
 }
 
 /* HEADER */
@@ -260,8 +260,8 @@ body{
   justify-content: center;
 }
 
-.separator-2{
-
+.separator-2{  
+  z-index: 2;
   position: absolute;  
 
   top: -113px;
@@ -273,8 +273,9 @@ body{
 
 /* FOOTER */
 
-.footer{
+.footer{  
   margin-top: 184px; 
+  
   min-height: 308px;
   position: relative;  
   z-index: -1;
@@ -288,9 +289,6 @@ body{
   bottom: 0;
   left: 0;
 
-  width: 100%;
-  height: 100%;
-
   z-index: 1;
 }
 
@@ -303,35 +301,30 @@ body{
   bottom: 0;
   left: 0;
 
-  width: 100%;
-  height: 100%;
-
-  background-color:#31d6ff;
-  mix-blend-mode: normal;
-  opacity: 0.6;  
-  z-index: 2;
+  background-color:rgba(77, 151, 169, 0.9);   
 }
 
-.footer__image{
-  position: relative; 
+.footer__image{  
   width: 100%; 
   height: 100%;  
-  
-  z-index: 1;
 }
 
 .footer__info{
-  z-index: 99;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
-  z-index: 2;
+  align-items: center;  
+  gap: 10px;
+
+  width: 100%;
+  min-height: 308px;  
 }
 
 .footer__primary-text{
   font-weight: 900;
   font-size: 40px;
   line-height: 44px;
-  /* color: #FAFAFA; */
+  color: #FAFAFA;
   z-index: 2;
 }
 
@@ -340,7 +333,7 @@ body{
   font-size: 18px;
   line-height: 26px;
   max-width: 350px;
-  /* color: #FAFAFA; */
+  color: #FAFAFA;
   z-index: 2;
 }
 
@@ -397,7 +390,7 @@ body{
 @media screen and (max-width: 900px) {
 
   /* HEADER */
-
+  
   .hero__info, .details{    
     max-width: 457px;
     padding: 0 24px;
@@ -409,6 +402,22 @@ body{
   .hero__secondary-text{
     font-size: 16px;
   } 
+  
+  /* FOOTER */
+
+  .footer{
+    padding: 0 24px;    
+  }
+  .footer, .footer__info{
+    min-height: 428px;
+  }
+  .footer__secondary-text{
+    max-width: 573px;
+  }
+  .footer__info{
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 766px) {
@@ -422,7 +431,6 @@ body{
 @media screen and (max-width: 400px) {
 
   /* HEADER */
-
   .hero__info{
     width: 100%;
   }
@@ -434,6 +442,10 @@ body{
     margin-top: 64px;
   }
 
+  .gallery{
+    gap: 10px;
+  }
+
   .details__primary-text{
     font-size: 32px;
     line-height: 36px;
@@ -441,5 +453,10 @@ body{
 
   .details__tertiary-text{
     font-size: 16px;
+  }
+
+  .footer__primary-text{
+    font-size: 32px;
+    line-height: 36px;
   }
 }
